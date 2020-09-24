@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YASH KUMAR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+     
+    <div class="container">
+     <div class="nav">
+
+     <a  onclick="displayabout()">About</a>
+     <a  onclick="display10()">Class &nbsp  10th</a>
+     <a  onclick="display12()">Class &nbsp 12th</a>
+     <a onclick="displaybtech()">B.tech</a>
+     
+     </div>
+
+     <div class="content"> 
+
+         <div id="about" class="content-1"> 
+            <img src="boy.svg" alt=""> <br>
+            <h3>Hey Welcome... </h3>
+            <h3>My Name is YASH KUMAR </h3>
+            <h3>My Roll is : 1906064 </h3>
+            <h5>Click on the above Links to Know More about me...</h5>
+         </div>
+
+         <div id="class10th" class="content-2">
+           <img src="10.svg" alt=""> <br>
+            <h3> School Name : INDIAN PUBLIC School</h3>
+            <h3> CITY : MADHUBANI ( BIHAR )</h3>
+            <h3> SCORE : 10 CGPA</h3>
+         </div>
+
+         <div id="class12th" class="content-3">
+            <img src="12.svg" alt=""> <br>
+            <h3> School Name : INDIAN PUBLIC School</h3>
+            <h3> CITY : MADHUBANI ( BIHAR )</h3>
+            <h3> SCORE : 87% </h3>
+        </div>
+
+        <div id="btech" class="content-4">
+            <img src="college.svg" alt=""> <br>
+            <h3> College Name : NATIONAL INSTITUTE OF TECHNOLOGY PATNA</h3>
+            <h3> CITY : PATNA ( BIHAR )</h3>
+            <h3> SCORE : 8.5 CGPA </h3>  
+        </div>
+
+     </div>
+
+    </div>
+    
+
+     <script>
+
+       function hideall( a,b,c)
+        {
+            document.getElementById(a).style.display="none";
+            document.getElementById(b).style.display="none";
+            document.getElementById(c).style.display="none";
+        }
+
+        function displayabout()
+        {
+            hideall("class10th","class12th","btech");
+            document.getElementById("about").style.display="block";
+        }
+
+        function display10()
+        {
+            hideall("about","class12th","btech");
+            document.getElementById("class10th").style.display="block";
+        }
+        
+        function display12()
+        {
+            hideall("about","class10th","btech");
+            document.getElementById("class12th").style.display="block";
+        }
+        function displaybtech()
+        {
+            hideall("about","class10th","class12th");
+            document.getElementById("btech").style.display="block";
+        }
+       
+
+    </script>
+</body>
+</html>
